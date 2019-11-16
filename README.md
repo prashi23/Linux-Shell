@@ -1,3 +1,3 @@
 # Linux-Shell
 
-### Bash like Linux Shell written in C with syscalls.
+### Bash like Linux Shell written in C with system calls.
