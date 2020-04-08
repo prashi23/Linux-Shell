@@ -5,6 +5,10 @@ void signalHandler(int sig, siginfo_t *si, void *context)
 	int status, pid, i, pos;
 	switch(sig)	
 	{
+		/*case SIGINT:
+		fprintf(stderr, "\nControl-C was pressed\n");
+		break;
+*/
 		case SIGQUIT:
 		exit(0);
 		break;
@@ -53,6 +57,7 @@ void ctrlC(int signo)
 			printf("\n");
 		}
 	}
+	// printf("\n");
 }
 
 void ctrlZ(int signo)

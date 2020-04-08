@@ -1,5 +1,4 @@
 #include "../header.h"
-
 void cd(char **tokens)
 {
 	char* destination = (char*)malloc(200*sizeof(char));
@@ -35,7 +34,6 @@ void pwd()
 }
 void echo(char **tokens)
 {
-	
 	int i;
 	for(i=1;tokens[i]!=NULL;i++)
 	{
@@ -44,4 +42,3 @@ void echo(char **tokens)
 	}
 	write(1,"\n",1);
 }
-

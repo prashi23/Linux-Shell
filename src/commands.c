@@ -1,5 +1,4 @@
 #include "../header.h"
-
 void pinfo(char **tokens)
 {
 	if(tokens[1] == NULL)
@@ -7,7 +6,6 @@ void pinfo(char **tokens)
 		fprintf(stderr,"Usage : pinfo <pid>\n");
 		return ;
 	}
-
 	int flag = 0;
 	char s[50];
 	ssize_t size;
@@ -40,10 +38,10 @@ void pinfo(char **tokens)
 	char path2[]="/proc/";
 	strcat(path2,tokens[1]);
 	strcat(path2,"/cmdline");
-	
+
 	fd=open(path2,O_RDONLY);
 	write(1,"Executable File: ",17);
-	
+
 	flag = 0;
 	while(1)
 	{
@@ -118,4 +116,3 @@ void sendsig(char** tokens)
 	pid_t pid = joblist[jno].pid;
 	ret = kill(pid,signo);
 }
-

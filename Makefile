@@ -1,5 +1,5 @@
-shell : main.o prompt.o getcommand.o parsing.o getcommand.o systemCommands.o builtinCommands.o signalhandler.o execute.o pipeHandler.o header.h 
-		gcc $^ -o shell
+myshell : main.o prompt.o getcommand.o parsing.o commands.o systemCommands.o builtinCommands.o signalhandler.o execute.o pipeHandler.o header.h
+		gcc $^ -o myshell
 
 getcommand.o : src/getcommand.c
 	gcc -c src/getcommand.c
@@ -33,4 +33,4 @@ main.o : main.c
 
 		
 clean : 
-	rm -f shell
+	rm -f myshell

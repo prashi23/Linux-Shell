@@ -16,4 +16,3 @@ void input()
 		exit(0);
 	}
 }
-

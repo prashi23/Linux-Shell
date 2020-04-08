@@ -1,5 +1,4 @@
 #include "../header.h"
-
 void syscommandsfg(char **tokens, int cno, int noOfCommands)
 {
 	int fd1[2], fd2[2];
@@ -58,8 +57,7 @@ void syscommandsfg(char **tokens, int cno, int noOfCommands)
 			}
 			else
 			{
-
-				if(cno % 2 == 0)
+                if(cno % 2 == 0)
 				{
 					dup2(fd2[1],1);	
 					dup2(fd1[0],0);		
